@@ -1,0 +1,168 @@
+.firstBanner{
+    background-image: url(./assets/img/banner/Untitled-1.pn);
+    
+    height: 200px;
+    width: 100%;
+
+}
+/* Google Font for a modern professional look */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap');
+
+.navbar {
+    width: 80%; /* Increase width for better alignment */
+    margin: 20px auto;
+    background-color: #ffffff; /* White background for clarity */
+    font-family: 'Montserrat', sans-serif; /* Clean font */
+}
+
+.navbar-nav {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly; /* Evenly space items */
+    padding: 0;
+    margin: 0;
+    height: 50px;
+    align-items: center;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #333; /* Dark text color for readability */
+    font-weight: 600; /* Bold font weight for emphasis */
+    padding: 0 25px; /* Horizontal padding for spacing */
+    display: flex;
+    align-items: center;
+    height: 100%;
+    transition: all 0.3s ease; /* Smooth transitions for all properties */
+}
+
+/* Hover effect for nav items */
+.nav-link:hover {
+    color: #3498db; /* Soft blue color on hover */
+   
+    transform: scale(1.1); /* Slight scale-up effect for hover */
+}
+
+/* Add right border to nav items except the last one */
+.nav-item:not(:last-child) {
+    border-right: 1px solid #ddd; /* Light border between items */
+}
+
+/* Active state for the current page */
+.nav-link.active {
+    color: #2c3e50; /* Darker color for active item */
+    font-weight: 700; /* Extra bold for active item */
+   
+    transform: scale(1.1); /* Slight scale-up effect for active item */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .navbar {
+        width: 90%; /* Make navbar slightly wider on smaller screens */
+    }
+
+    .navbar-nav {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: flex-start; /* Align items to the left */
+        padding: 10px 0;
+    }
+
+    .nav-link {
+        padding: 10px 15px; /* Increase padding for better touch targets */
+    }
+
+    .nav-item {
+        width: 100%; /* Make items take full width */
+        border-right: none; /* Remove borders on small screens */
+    }
+}
+
+/* SECOND BANNER */
+/* Main container for the banner */
+/* Main container for the banner */
+.banner-2 {
+    display: flex;
+    justify-content: center; /* Center text horizontally */
+    align-items: center; /* Center text vertically */
+    height: 700px; /* Set height */
+    width: 100%; /* Full width of the container */
+    position: relative;
+    background-image: url('/assets/img/banner/Untitled-3.png'); /* Add your background image URL here */
+    background-size: cover; /* Ensure the image covers the div */
+    background-position: center; /* Center the background image */
+    transition: background-color 0.3s ease; /* Transition for background dimming */
+}
+
+/* Dimming effect on the background */
+.banner-2::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Darker dim overlay */
+    opacity: 0; /* Initially invisible */
+    transition: opacity 0.3s ease; /* Smooth transition */
+}
+
+/* Apply dim effect when hovering over the entire banner */
+.banner-2:hover::after {
+    opacity: 1; /* Make overlay visible on hover */
+}
+
+/* Text container */
+.banner-text {
+    text-align: center;
+    color: white; /* Text color */
+    font-family: 'Poppins', sans-serif; /* Modern, clean font */
+    font-weight: 800; /* Extra bold font */
+    letter-spacing: 2px; /* Increased letter-spacing for readability */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition */
+    padding: 20px; /* Padding for spacing */
+    z-index: 1; /* Ensure the text is above the dim effect */
+}
+
+/* Text lines inside the container */
+.banner-text .first-line {
+    font-size: 70px; /* Larger font size for the first line */
+    margin-bottom: 10px; /* Space between the lines */
+}
+
+.banner-text .second-line {
+    font-size: 70px; /* Larger font size for the second line */
+    margin-bottom: 20px; /* Space before the button */
+}
+
+/* Show text and animate when hovering */
+.banner-2:hover .banner-text {
+    opacity: 1; /* Make the text visible */
+    transform: translateY(-20px); /* Slight move-up effect */
+}
+
+/* Explore Now button styling */
+.explore-button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    background-color: #3498db; /* Blue color for the button */
+    border: none;
+    border-radius: 5px;
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transition for button hover effect */
+    margin-top: 20px;
+}
+
+/* Button hover effect */
+.explore-button:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+    transform: translateY(-5px); /* Button slightly moves up on hover */
+}
